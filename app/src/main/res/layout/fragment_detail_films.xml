@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#7e7c7c"
+    tools:context=".controller.fragmentcontroller.DetailFilmsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/id_fragment_details_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="back"
+                android:id="@+id/id_fragment_details_button_back"
+                android:background="@drawable/background_details_tv"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/id_fragment_details_tv_name_film"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="27sp"
+                android:background="@drawable/background_details_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/id_fragment_details_tv_age_limit"
+                app:layout_constraintTop_toBottomOf="@id/id_fragment_details_img"
+                app:layout_constraintWidth_percent="0.7"/>
+
+            <TextView
+                android:id="@+id/id_fragment_details_tv_age_limit"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/id_fragment_details_tv_name_film"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/id_fragment_details_img"
+                app:layout_constraintWidth_percent="0.2"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:textSize="15sp"
+                android:background="@drawable/background_details_tv"
+                android:id="@+id/id_fragment_details_tv_rating_kp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/id_fragment_details_tv_rating_kritics"
+                app:layout_constraintTop_toBottomOf="@id/id_fragment_details_tv_name_film"
+                app:layout_constraintWidth_percent="0.45"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:textSize="15sp"
+                android:background="@drawable/background_details_tv"
+                android:id="@+id/id_fragment_details_tv_rating_kritics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/id_fragment_details_tv_rating_kp"
+                app:layout_constraintTop_toBottomOf="@id/id_fragment_details_tv_name_film"
+                app:layout_constraintWidth_percent="0.45"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:textSize="15sp"
+                android:background="@drawable/background_details_tv"
+                app:layout_constraintEnd_toStartOf="@id/id_fragment_details_tv_year"
+                android:id="@+id/id_fragment_details_tv_duration"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/id_fragment_details_tv_rating_kp"
+                app:layout_constraintWidth_percent="0.45"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic"
+                android:textSize="15sp"
+                android:background="@drawable/background_details_tv"
+                android:id="@+id/id_fragment_details_tv_year"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/id_fragment_details_tv_duration"
+                app:layout_constraintTop_toBottomOf="@id/id_fragment_details_tv_rating_kp"
+                app:layout_constraintWidth_percent="0.45"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:textSize="30sp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/id_fragment_details_tv_desc"
+                app:layout_constraintWidth_percent="0.9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/id_fragment_details_tv_duration"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

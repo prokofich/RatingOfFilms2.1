@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/splashFragment">
+
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.ratingoffilms.controller.fragmentcontroller.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_rootFragment"
+            app:destination="@id/rootFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rootFragment"
+        android:name="com.example.ratingoffilms.controller.fragmentcontroller.RootFragment"
+        android:label="fragment_root"
+        tools:layout="@layout/fragment_root" >
+        <action
+            android:id="@+id/action_rootFragment_to_detailFilmsFragment2"
+            app:destination="@id/detailFilmsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/awardsFragment"
+        android:name="com.example.ratingoffilms.controller.fragmentcontroller.AwardsFragment"
+        android:label="fragment_awards"
+        tools:layout="@layout/fragment_awards" />
+    <fragment
+        android:id="@+id/filmsFragment"
+        android:name="com.example.ratingoffilms.controller.fragmentcontroller.FilmsFragment"
+        android:label="fragment_films"
+        tools:layout="@layout/fragment_films" />
+    <fragment
+        android:id="@+id/detailFilmsFragment"
+        android:name="com.example.ratingoffilms.controller.fragmentcontroller.DetailFilmsFragment"
+        android:label="fragment_detail_films"
+        tools:layout="@layout/fragment_detail_films" />
+</navigation>
