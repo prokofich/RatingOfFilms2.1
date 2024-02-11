@@ -19,16 +19,16 @@ import com.example.ratingoffilms.model.modelresponse.detailfilm.Doc
 
 class DetailFilmsFragment : Fragment(),InterfaceForDetailFilmFragment {
 
-    private lateinit var apiService: ApiServiceDetailFilm
-    private lateinit var img:ImageView
-    private lateinit var nameFilm:TextView
-    private lateinit var ageRating:TextView
-    private lateinit var rating:TextView
-    private lateinit var ratingCritics:TextView
-    private lateinit var durationFilm:TextView
-    private lateinit var yearFilm:TextView
-    private lateinit var description:TextView
-    private lateinit var buttonBack:Button
+    private var apiService: ApiServiceDetailFilm? = null
+    private var img:ImageView? = null
+    private var nameFilm:TextView? = null
+    private var ageRating:TextView? = null
+    private var rating:TextView? = null
+    private var ratingCritics:TextView? = null
+    private var durationFilm:TextView? = null
+    private var yearFilm:TextView? = null
+    private var description:TextView? = null
+    private var buttonBack:Button? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,7 +51,7 @@ class DetailFilmsFragment : Fragment(),InterfaceForDetailFilmFragment {
         buttonBack = view.findViewById(R.id.id_fragment_details_button_back)
 
         apiService = ApiServiceDetailFilm(this)
-        apiService.loadFilm(MAIN.getIdMovie().toString())
+        apiService?.loadFilm(MAIN.getIdMovie().toString())
 
         //возврат на начальные экраны
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner){
@@ -59,7 +59,7 @@ class DetailFilmsFragment : Fragment(),InterfaceForDetailFilmFragment {
         }
 
         //возврат на начальные экраны
-        buttonBack.setOnClickListener {
+        buttonBack?.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().remove(this@DetailFilmsFragment).commit()
         }
 
@@ -68,14 +68,14 @@ class DetailFilmsFragment : Fragment(),InterfaceForDetailFilmFragment {
     //показ всех параметров
     @SuppressLint("SetTextI18n")
     override fun sendParameters(list: List<Doc?>) {
-        img.load(list[0]?.backdrop?.url)
-        nameFilm.text = list[0]?.name
-        ageRating.text = "${list[0]?.ageRating}+"
-        rating.text = "viewer rating: ${list[0]?.rating?.kp}/10"
-        ratingCritics.text = "critics rating: ${list[0]?.rating?.filmCritics}/10"
-        durationFilm.text = "duration: ${list[0]?.movieLength} min"
-        yearFilm.text = "released: ${list[0]?.year} year"
-        description.text = list[0]?.description
+        img?.load(list[0]?.backdrop?.url)
+        nameFilm?.text = list[0]?.name
+        ageRating?.text = "${list[0]?.ageRating}+"
+        rating?.text = "viewer rating: ${list[0]?.rating?.kp}/10"
+        ratingCritics?.text = "critics rating: ${list[0]?.rating?.filmCritics}/10"
+        durationFilm?.text = "duration: ${list[0]?.movieLength} min"
+        yearFilm?.text = "released: ${list[0]?.year} year"
+        description?.text = list[0]?.description
     }
 
 }

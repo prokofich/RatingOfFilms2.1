@@ -14,9 +14,9 @@ import com.example.ratingoffilms.model.modelresponse.films.Doc
 
 class FilmsFragment : Fragment(),InterfaceForFilmsFragment {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var adapterFilms:FilmsAdapter
-    private lateinit var apiService:ApiServiceFilms
+    private var recyclerView: RecyclerView? = null
+    private var adapterFilms:FilmsAdapter? = null
+    private var apiService:ApiServiceFilms? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,14 +32,14 @@ class FilmsFragment : Fragment(),InterfaceForFilmsFragment {
 
         recyclerView = view.findViewById(R.id.id_rv_films)
         adapterFilms = FilmsAdapter()
-        recyclerView.adapter = adapterFilms
+        recyclerView?.adapter = adapterFilms
 
         //загрузка фильмов
-        apiService.loadFilms()
+        apiService?.loadFilms()
     }
 
     //отправка в адаптер + показ фильмов
     override fun setListForAdapter(list: List<Doc?>) {
-        adapterFilms.setList(list)
+        adapterFilms?.setList(list)
     }
 }
