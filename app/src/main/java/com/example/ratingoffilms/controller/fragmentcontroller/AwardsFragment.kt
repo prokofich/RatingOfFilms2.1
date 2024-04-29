@@ -14,9 +14,9 @@ import com.example.ratingoffilms.model.modelresponse.awards.Doc
 
 class AwardsFragment : Fragment(),InterfaceForAwardsFragment {
 
-    private var recyclerView: RecyclerView? = null
+    private var recyclerView : RecyclerView? = null
     private var adapterAwards: AwardsAdapter? = null
-    private var apiService:ApiServiceAwards? = null
+    private var apiService : ApiServiceAwards? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

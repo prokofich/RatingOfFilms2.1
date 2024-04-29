@@ -16,7 +16,7 @@ import java.io.IOException
 
 class ApiServiceAwards(private val view:InterfaceForAwardsFragment) {
 
-    fun loadAwards(){
+    fun loadAwards() {
         val client = OkHttpClient()
         val request = Request.Builder()
             .url(URL_GSON_AWARDS)

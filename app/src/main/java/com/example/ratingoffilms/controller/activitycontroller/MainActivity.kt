@@ -20,25 +20,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     //функция замены фрагмента на экране
-    private fun replaceFragment(fragment: Fragment){
+    private fun replaceFragment(fragment : Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.nav_host,fragment)
         transaction.commit()
     }
 
     //показ фрагмента с описанием фильма
-    fun showDetailFragment(){
-        replaceFragment(DetailFilmsFragment())
-    }
+    fun showDetailFragment() = replaceFragment(DetailFilmsFragment())
 
     //установка id выбранного фильма
-    fun setIdMovie(id:Int){
+    fun setIdMovie(id : Int) {
         idMovie = id
     }
 
     //получение id выбранного фильма
-    fun getIdMovie(): Int {
-        return idMovie
-    }
+    fun getIdMovie() : Int = idMovie
 
 }

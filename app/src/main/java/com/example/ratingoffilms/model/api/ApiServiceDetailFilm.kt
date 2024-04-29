@@ -16,7 +16,7 @@ import java.io.IOException
 
 class ApiServiceDetailFilm(private val view:InterfaceForDetailFilmFragment) {
 
-    fun loadFilm(idMovie:String){
+    fun loadFilm(idMovie : String) {
         val client = OkHttpClient()
         val request = Request.Builder()
             .url(URL_JSON_DETAIL_FILMS+idMovie)

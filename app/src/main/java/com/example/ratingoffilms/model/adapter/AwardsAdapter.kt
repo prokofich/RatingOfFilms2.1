@@ -12,9 +12,9 @@ import com.example.ratingoffilms.R
 import com.example.ratingoffilms.model.constant.MAIN
 import com.example.ratingoffilms.model.modelresponse.awards.Doc
 
-class AwardsAdapter:RecyclerView.Adapter<AwardsAdapter.AwardsViewHolder>() {
+class AwardsAdapter : RecyclerView.Adapter<AwardsAdapter.AwardsViewHolder>() {
 
-    private var listAwards = listOf<Doc?>()
+    private var listAwards = listOf <Doc?> ()
 
     class AwardsViewHolder(view: View):RecyclerView.ViewHolder(view)
 
@@ -33,8 +33,8 @@ class AwardsAdapter:RecyclerView.Adapter<AwardsAdapter.AwardsViewHolder>() {
         val nameTitleAward = holder.itemView.findViewById<TextView>(R.id.id_item_rv_awards_tv_name_awards)
         val imageAward = holder.itemView.findViewById<ImageView>(R.id.id_item_rv_awards_img)
 
-        if( listAwards[position]?.movie?.name!=null &&
-            listAwards[position]?.nomination?.title!=null &&
+        if( listAwards[position]?.movie?.name !=null  &&
+            listAwards[position]?.nomination?.title != null &&
             listAwards[position]?.nomination?.award?.title == "Оскар"){
 
             nameFilm.text = listAwards[position]!!.movie!!.name
@@ -51,7 +51,7 @@ class AwardsAdapter:RecyclerView.Adapter<AwardsAdapter.AwardsViewHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(list:List<Doc?>){
+    fun setList(list : List<Doc?>){
         listAwards = list
         notifyDataSetChanged()
     }
