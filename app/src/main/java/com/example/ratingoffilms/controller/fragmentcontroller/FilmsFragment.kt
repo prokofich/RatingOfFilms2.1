@@ -10,13 +10,13 @@ import com.example.ratingoffilms.R
 import com.example.ratingoffilms.model.adapter.FilmsAdapter
 import com.example.ratingoffilms.model.api.ApiServiceFilms
 import com.example.ratingoffilms.model.api.InterfaceForFilmsFragment
-import com.example.ratingoffilms.model.modelresponse.films.Doc
+import com.example.ratingoffilms.model.modelResponse.films.Doc
 
-class FilmsFragment : Fragment(),InterfaceForFilmsFragment {
+class FilmsFragment: Fragment(), InterfaceForFilmsFragment {
 
     private var recyclerView: RecyclerView? = null
-    private var adapterFilms:FilmsAdapter? = null
-    private var apiService:ApiServiceFilms? = null
+    private var adapterFilms: FilmsAdapter? = null
+    private var apiService: ApiServiceFilms? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,11 +34,11 @@ class FilmsFragment : Fragment(),InterfaceForFilmsFragment {
         adapterFilms = FilmsAdapter()
         recyclerView?.adapter = adapterFilms
 
-        //загрузка фильмов
+        /** загрузка фильмов */
         apiService?.loadFilms()
     }
 
-    //отправка в адаптер + показ фильмов
+    /** отправка в адаптер + показ фильмов */
     override fun setListForAdapter(list: List<Doc?>) {
         adapterFilms?.setList(list)
     }

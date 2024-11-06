@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.ratingoffilms.R
 import com.example.ratingoffilms.model.constant.MAIN
-import com.example.ratingoffilms.model.modelresponse.films.Doc
+import com.example.ratingoffilms.model.modelResponse.films.Doc
 
 class FilmsAdapter:RecyclerView.Adapter<FilmsAdapter.FilmsViewHolder>() {
 

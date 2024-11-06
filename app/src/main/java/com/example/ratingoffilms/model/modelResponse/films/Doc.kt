@@ -1,4 +1,4 @@
-package com.example.ratingoffilms.model.modelresponse.films
+package com.example.ratingoffilms.model.modelResponse.films
 
 import androidx.annotation.Keep
 

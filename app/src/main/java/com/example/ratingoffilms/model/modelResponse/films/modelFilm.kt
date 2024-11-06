@@ -1,9 +1,10 @@
-package com.example.ratingoffilms.model.modelresponse.detailfilm
+package com.example.ratingoffilms.model.modelResponse.films
 
 import androidx.annotation.Keep
 
+
 @Keep
-data class modelDetailFilm(
+data class modelFilm(
     val docs: List<Doc?>,
     val limit: Int?,
     val page: Int?,

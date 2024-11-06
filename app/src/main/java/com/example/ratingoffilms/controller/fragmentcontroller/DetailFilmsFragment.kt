@@ -15,20 +15,20 @@ import com.example.ratingoffilms.R
 import com.example.ratingoffilms.model.api.ApiServiceDetailFilm
 import com.example.ratingoffilms.model.api.InterfaceForDetailFilmFragment
 import com.example.ratingoffilms.model.constant.MAIN
-import com.example.ratingoffilms.model.modelresponse.detailfilm.Doc
+import com.example.ratingoffilms.model.modelResponse.detailfilm.Doc
 
-class DetailFilmsFragment : Fragment(),InterfaceForDetailFilmFragment {
+class DetailFilmsFragment: Fragment(), InterfaceForDetailFilmFragment {
 
-    private var apiService : ApiServiceDetailFilm? = null
-    private var img : ImageView? = null
-    private var nameFilm : TextView? = null
-    private var ageRating : TextView? = null
-    private var rating : TextView? = null
-    private var ratingCritics : TextView? = null
-    private var durationFilm : TextView? = null
-    private var yearFilm : TextView? = null
-    private var description : TextView? = null
-    private var buttonBack : Button? = null
+    private var apiService: ApiServiceDetailFilm? = null
+    private var img: ImageView? = null
+    private var nameFilm: TextView? = null
+    private var ageRating: TextView? = null
+    private var rating: TextView? = null
+    private var ratingCritics: TextView? = null
+    private var durationFilm: TextView? = null
+    private var yearFilm: TextView? = null
+    private var description: TextView? = null
+    private var buttonBack: Button? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,19 +53,19 @@ class DetailFilmsFragment : Fragment(),InterfaceForDetailFilmFragment {
         apiService = ApiServiceDetailFilm(this)
         apiService?.loadFilm(MAIN.getIdMovie().toString())
 
-        //возврат на начальные экраны
+        /** возврат на начальные экраны */
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner){
             requireActivity().supportFragmentManager.beginTransaction().remove(this@DetailFilmsFragment).commit()
         }
 
-        //возврат на начальные экраны
+        /** возврат на начальные экраны */
         buttonBack?.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction().remove(this@DetailFilmsFragment).commit()
         }
 
     }
 
-    //показ всех параметров
+    /** показ всех параметров */
     @SuppressLint("SetTextI18n")
     override fun sendParameters(list : List<Doc?>) {
         img?.load(list[0]?.backdrop?.url)

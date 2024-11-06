@@ -10,7 +10,7 @@ import androidx.navigation.Navigation
 import com.example.ratingoffilms.R
 import com.example.ratingoffilms.viewmodel.SplashViewModel
 
-class SplashFragment : Fragment() {
+class SplashFragment: Fragment() {
 
     private var splashViewModel: SplashViewModel? = null
 

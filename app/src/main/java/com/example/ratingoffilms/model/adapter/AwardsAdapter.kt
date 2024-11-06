@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.ratingoffilms.R
 import com.example.ratingoffilms.model.constant.MAIN
-import com.example.ratingoffilms.model.modelresponse.awards.Doc
+import com.example.ratingoffilms.model.modelResponse.awards.Doc
 
-class AwardsAdapter : RecyclerView.Adapter<AwardsAdapter.AwardsViewHolder>() {
+class AwardsAdapter: RecyclerView.Adapter<AwardsAdapter.AwardsViewHolder>() {
 
-    private var listAwards = listOf <Doc?> ()
+    private var listAwards = listOf<Doc?>()
 
     class AwardsViewHolder(view: View):RecyclerView.ViewHolder(view)
 
@@ -51,7 +51,7 @@ class AwardsAdapter : RecyclerView.Adapter<AwardsAdapter.AwardsViewHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(list : List<Doc?>){
+    fun setList(list: List<Doc?>){
         listAwards = list
         notifyDataSetChanged()
     }

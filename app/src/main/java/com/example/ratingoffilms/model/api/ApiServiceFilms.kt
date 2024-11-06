@@ -5,7 +5,7 @@ import android.os.Looper
 import com.example.ratingoffilms.model.constant.MY_TOKEN_FOR_SERVER
 import com.example.ratingoffilms.model.constant.NAME_HEADER
 import com.example.ratingoffilms.model.constant.URL_JSON_FILMS
-import com.example.ratingoffilms.model.modelresponse.films.modelFilm
+import com.example.ratingoffilms.model.modelResponse.films.modelFilm
 import com.google.gson.Gson
 import okhttp3.Call
 import okhttp3.Callback

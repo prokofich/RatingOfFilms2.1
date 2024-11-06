@@ -13,7 +13,7 @@ import com.example.ratingoffilms.model.adapter.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class RootFragment : Fragment() {
+class RootFragment: Fragment() {
 
     private var ctx: Context? = null
 

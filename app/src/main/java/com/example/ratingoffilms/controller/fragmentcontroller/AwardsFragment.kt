@@ -10,13 +10,13 @@ import com.example.ratingoffilms.R
 import com.example.ratingoffilms.model.adapter.AwardsAdapter
 import com.example.ratingoffilms.model.api.ApiServiceAwards
 import com.example.ratingoffilms.model.api.InterfaceForAwardsFragment
-import com.example.ratingoffilms.model.modelresponse.awards.Doc
+import com.example.ratingoffilms.model.modelResponse.awards.Doc
 
-class AwardsFragment : Fragment(),InterfaceForAwardsFragment {
+class AwardsFragment : Fragment(), InterfaceForAwardsFragment {
 
-    private var recyclerView : RecyclerView? = null
+    private var recyclerView: RecyclerView? = null
     private var adapterAwards: AwardsAdapter? = null
-    private var apiService : ApiServiceAwards? = null
+    private var apiService: ApiServiceAwards? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,12 +34,12 @@ class AwardsFragment : Fragment(),InterfaceForAwardsFragment {
         adapterAwards = AwardsAdapter()
         recyclerView?.adapter = adapterAwards
 
-        //загрузка наград фильмов
+        /** загрузка наград фильмов */
         apiService?.loadAwards()
 
     }
 
-    //отправка в адаптер + показ наград фильмов
+    /** отправка в адаптер + показ наград фильмов */
     override fun setListForAdapter(list: List<Doc?>) {
         adapterAwards?.setList(list)
     }
